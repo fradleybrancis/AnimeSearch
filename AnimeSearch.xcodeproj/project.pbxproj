@@ -13,6 +13,13 @@
 		1EE1622F2564927B00E4F0E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1622E2564927B00E4F0E2 /* Preview Assets.xcassets */; };
 		1EE1623A2564927B00E4F0E2 /* AnimeSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE162392564927B00E4F0E2 /* AnimeSearchTests.swift */; };
 		1EE162452564927C00E4F0E2 /* AnimeSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE162442564927C00E4F0E2 /* AnimeSearchUITests.swift */; };
+		1EE162562564940400E4F0E2 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE162552564940400E4F0E2 /* Networking.swift */; };
+		1EE1625B2564944C00E4F0E2 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1625A2564944C00E4F0E2 /* Model.swift */; };
+		1EE1626025649CF100E4F0E2 /* AnimeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1625F25649CF100E4F0E2 /* AnimeRow.swift */; };
+		1EE16265256584D200E4F0E2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE16264256584D200E4F0E2 /* ImageLoader.swift */; };
+		1EE1626A25658BF400E4F0E2 /* NarutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1626925658BF400E4F0E2 /* NarutoView.swift */; };
+		1EE1626F2565924100E4F0E2 /* CharacterSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1626E2565924100E4F0E2 /* CharacterSearchView.swift */; };
+		1EE162742565B06A00E4F0E2 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE162732565B06A00E4F0E2 /* CharacterRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +52,13 @@
 		1EE162402564927C00E4F0E2 /* AnimeSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimeSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE162442564927C00E4F0E2 /* AnimeSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeSearchUITests.swift; sourceTree = "<group>"; };
 		1EE162462564927C00E4F0E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EE162552564940400E4F0E2 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		1EE1625A2564944C00E4F0E2 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		1EE1625F25649CF100E4F0E2 /* AnimeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeRow.swift; sourceTree = "<group>"; };
+		1EE16264256584D200E4F0E2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		1EE1626925658BF400E4F0E2 /* NarutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarutoView.swift; sourceTree = "<group>"; };
+		1EE1626E2565924100E4F0E2 /* CharacterSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSearchView.swift; sourceTree = "<group>"; };
+		1EE162732565B06A00E4F0E2 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,13 @@
 			children = (
 				1EE162272564927600E4F0E2 /* AnimeSearchApp.swift */,
 				1EE162292564927600E4F0E2 /* ContentView.swift */,
+				1EE1626925658BF400E4F0E2 /* NarutoView.swift */,
+				1EE1626E2565924100E4F0E2 /* CharacterSearchView.swift */,
+				1EE16264256584D200E4F0E2 /* ImageLoader.swift */,
+				1EE1625F25649CF100E4F0E2 /* AnimeRow.swift */,
+				1EE162732565B06A00E4F0E2 /* CharacterRow.swift */,
+				1EE1625A2564944C00E4F0E2 /* Model.swift */,
+				1EE162552564940400E4F0E2 /* Networking.swift */,
 				1EE1622B2564927B00E4F0E2 /* Assets.xcassets */,
 				1EE162302564927B00E4F0E2 /* Info.plist */,
 				1EE1622D2564927B00E4F0E2 /* Preview Content */,
@@ -259,8 +280,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE162562564940400E4F0E2 /* Networking.swift in Sources */,
+				1EE162742565B06A00E4F0E2 /* CharacterRow.swift in Sources */,
 				1EE1622A2564927600E4F0E2 /* ContentView.swift in Sources */,
+				1EE1626F2565924100E4F0E2 /* CharacterSearchView.swift in Sources */,
+				1EE16265256584D200E4F0E2 /* ImageLoader.swift in Sources */,
+				1EE1626025649CF100E4F0E2 /* AnimeRow.swift in Sources */,
+				1EE1626A25658BF400E4F0E2 /* NarutoView.swift in Sources */,
 				1EE162282564927600E4F0E2 /* AnimeSearchApp.swift in Sources */,
+				1EE1625B2564944C00E4F0E2 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
