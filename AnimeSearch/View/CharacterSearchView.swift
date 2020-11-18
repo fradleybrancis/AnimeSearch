@@ -8,9 +8,9 @@
 import SwiftUI
  
 struct CharacterSearchView: View {
+    @ObservedObject var viewModel = CharacterViewModel()
     @State var searchText: String = ""
-    @State var animeCharacters = [AnimeCharacter]()
- 
+    
     var body: some View {
         VStack(alignment: .trailing, spacing: 10) {
             HStack {
@@ -22,29 +22,17 @@ struct CharacterSearchView: View {
                     .padding(.horizontal, 10)
                 
                 Button("Search") {
-                    fetch()
+                    viewModel.getData(query: searchText)
                 }
                 .padding(.trailing, 10)
                 .transition(.move(edge: .trailing))
                 .animation(.default)
             }
             
-            List(animeCharacters) { animeCharacter in
+            List(viewModel.animeCharacters) { animeCharacter in
                 CharacterRow(character: animeCharacter)
             }
             
-        }
-    }
-    
-    func fetch() {
-        let networkCall = NetworkCall(searchQuery: searchText)
-        networkCall.makeCharacterRequest { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let characters):
-                self.animeCharacters.append(contentsOf: characters)
-            }
         }
     }
 }

@@ -1,33 +1,31 @@
 //
-//  NarutoView.swift
+//  NarutoViewModel.swift
 //  AnimeSearch
 //
 //  Created by Rave BizzDev on 11/18/20.
 //
-
 import SwiftUI
 
-struct NarutoView: View {
-    @State var animes = [Anime]()
+class NarutoViewModel: ObservableObject {
+    @Published private var model: [Anime] = []
     
-    var body: some View {
-        List(animes) { anime in
-            AnimeRow(anime: anime)
-        }
-        .onAppear(perform: {
-            fetch()
-        })
+    var animes: [Anime] {
+        return model
     }
     
-    func fetch() {
+    func getData() {
         let networkCall = NetworkCall()
+        
         networkCall.makeNarutoRequest { result in
             switch result {
             case .failure(let error):
                 print(error)
             case .success(let animeList):
-                self.animes.append(contentsOf: animeList)
+                DispatchQueue.main.async {
+                    self.model = animeList
+                }
             }
         }
     }
+    
 }
